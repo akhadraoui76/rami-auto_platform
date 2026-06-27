@@ -1,14 +1,6 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Search } from "lucide-react";
-import carSuv from "@/assets/car-suv.png";
-import carSedan from "@/assets/car-sedan.png";
-import carElectric from "@/assets/car-electric.png";
-import carCoupe from "@/assets/car-coupe.png";
-import carTruck from "@/assets/car-truck.png";
-import heroCar from "@/assets/hero-car.png";
-import coolray from "@/assets/coolray.png";
-import songPlus from "@/assets/BYD-Song-Plus.png";
-import jetour from "@/assets/-x70-jetour-.png";
+import { supabase } from "@/lib/supabase";
 
 interface Car {
   id: number;
@@ -20,94 +12,25 @@ interface Car {
   country: string;
   image: string;
 }
-
-const cars: Car[] = [
-  { 
-    id: 1, 
-    model: "Tiggo 7 Pro Max", 
-    brand: "Chery", 
-    year: 2025, 
-    price: '35000', 
-    color: "White", 
-    country: "China", 
-    image: carSuv 
-  },
-  { 
-    id: 2, 
-    model: "Coolray", 
-    brand: "Geely", 
-    year: 2025, 
-    price: '28000', 
-    color: "Black", 
-    country: "China", 
-    image: coolray
-  },
-  { 
-    id: 3, 
-    model: "Song Plus", 
-    brand: "BYD", 
-    year: 2025, 
-    price: '32000', 
-    color: "Grey", 
-    country: "China", 
-    image: songPlus 
-  },
-  { 
-    id: 4, 
-    model: "X70 Plus", 
-    brand: "Jetour", 
-    year: 2025, 
-    price: '30000', 
-    color: "White", 
-    country: "China", 
-    image: jetour
-  },
-  { 
-    id: 5, 
-    model: "CS55 Plus", 
-    brand: "Changan", 
-    year: 2025, 
-    price: '29000', 
-    color: "Blue", 
-    country: "China", 
-    image: carSuv 
-  },
-  { 
-    id: 6, 
-    model: "MG ZS", 
-    brand: "MG", 
-    year: 2025, 
-    price: '27000', 
-    color: "Red", 
-    country: "China", 
-    image: carSuv 
-  },
-  { 
-    id: 7, 
-    model: "Golf 8 GTD", 
-    brand: "Volkswagen", 
-    year: 2024, 
-    price: '45000', 
-    color: "Grey", 
-    country: "Germany", 
-    image: carSedan 
-  },
-  { 
-    id: 8, 
-    model: "T-Roc", 
-    brand: "Volkswagen", 
-    year: 2025, 
-    price: '42000', 
-    color: "Black", 
-    country: "Germany", 
-    image: carSuv 
-  },
-];
-
 const countries = ["All", "China", "Korea", "Europe", "UAE"];
 const priceRanges = ["All", "Under $50K", "$50K–$80K", "Over $80K"];
 
 const InventorySection = () => {
+
+const [cars, setCars] = useState<Car[]>([]);
+useEffect(() => {
+  const fetchCars = async () => {
+    const { data, error } = await supabase
+  .from("cars")
+  .select("*");
+
+    if (error) console.error(error)
+    else setCars(data)
+  }
+  
+  fetchCars()
+}, [])
+
   const [country, setCountry] = useState("All");
   const [priceRange, setPriceRange] = useState("All");
   const [search, setSearch] = useState("");
@@ -121,8 +44,8 @@ const InventorySection = () => {
       if (search && !`${car.model} ${car.brand}`.toLowerCase().includes(search.toLowerCase())) return false;
       return true;
     });
-  }, [country, priceRange, search]);
-
+  }, [cars, country, priceRange, search]);
+  
   return (
     <section id="inventory" className="py-24">
       <div className="container mx-auto px-4 lg:px-8">

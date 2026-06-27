@@ -5,45 +5,38 @@
 @tailwind utilities;
 
 @layer base {
- :root {
-  --background: 255 25% 97%;
-  --foreground: 215 25% 15%;
+:root {
+  /* الخلفيات */
+  --background: 210 20% 98%;
+  --foreground: 215 30% 12%;
 
   --card: 0 0% 100%;
-  --card-foreground: 215 25% 15%;
+  --card-foreground: 215 30% 12%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 215 25% 15%;
+  --popover-foreground: 215 30% 12%;
 
-  /* Automotive Blue */
-  --primary: 215 65% 28%;
+  /* الأزرق الرئيسي */
+  --primary: 215 70% 25%;
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 210 18% 92%;
-  --secondary-foreground: 215 25% 15%;
+  /* الرمادي الفاتح */
+  --secondary: 210 15% 93%;
+  --secondary-foreground: 215 30% 12%;
 
-  --accent: 200 75% 45%;
-  --accent-foreground: 0 0% 100%;
+  /* الذهبي */
+  --accent: 43 90% 48%;
+  --accent-foreground: 215 30% 12%;
 
-  --muted: 210 15% 94%;
-  --muted-foreground: 215 12% 45%;
+  --muted: 210 15% 85%;
+  --muted-foreground: 215 15% 45%;
 
-  --border: 210 15% 86%;
-  --input: 210 15% 86%;
-  --ring: 215 65% 28%;
+  --border: 210 15% 88%;
+  --input: 210 15% 88%;
+  --ring: 215 70% 25%;
 
-  --radius: 0.75rem;
-
-  --surface-elevated: 210 20% 99%;
-
-  --sidebar-background: 215 25% 18%;
-  --sidebar-foreground: 0 0% 95%;
-  --sidebar-primary: 200 75% 45%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 215 20% 25%;
-  --sidebar-accent-foreground: 0 0% 95%;
-  --sidebar-border: 215 20% 30%;
-  --sidebar-ring: 200 75% 45%;
+  --radius: 0.5rem;
+  --surface-elevated: 0 0% 100%;
 }
 }
 
@@ -62,30 +55,22 @@
 }
 
 @layer utilities {
-  .text-gradient-gold {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(226, 100%, 51%), hsl(236, 71%, 43%), hsl(220, 100%, 60%));
-  }
+ .text-gradient-gold {
+  @apply bg-clip-text text-transparent;
+  background-image: linear-gradient(135deg, hsl(43, 90%, 50%), hsl(43, 85%, 45%));
+}
 
-  .bg-gradient-gold {
-    background-image: linear-gradient(135deg, hsl(226, 100%, 51%), hsl(219, 60%,60%));
-  }
+.bg-gradient-gold {
+  background-image: linear-gradient(135deg, hsl(43, 90%, 50%), hsl(43, 85%, 45%));
+}
 
-  .bg-gradient-dark {
-    background-image: linear-gradient(
-      180deg,
-      hsl(40 33% 99%),
-      hsl(40 25% 96%)
-    );
-  }
+.shadow-gold {
+  box-shadow: 0 0 30px -5px hsl(43 90% 48% / 0.2);
+}
 
-  .shadow-gold {
-    box-shadow: 0 0 30px -5px hsl(226 100% 51% / 0.15);
-  }
-
-  .shadow-gold-lg {
-    box-shadow: 0 0 60px -10px hsl(226 100% 51% / 0.2);
-  }
+.shadow-gold-lg {
+  box-shadow: 0 0 60px -10px hsl(43 90% 48% / 0.25);
+}
 }
 
 html {
