@@ -6,6 +6,9 @@ import carElectric from "@/assets/car-electric.png";
 import carCoupe from "@/assets/car-coupe.png";
 import carTruck from "@/assets/car-truck.png";
 import heroCar from "@/assets/hero-car.png";
+import coolray from "@/assets/coolray.png";
+import songPlus from "@/assets/BYD-Song-Plus.png";
+import jetourX70 from "@/assets/jetour-x70.png";
 
 interface Car {
   id: number;
@@ -24,7 +27,7 @@ const cars: Car[] = [
     model: "Tiggo 7 Pro Max", 
     brand: "Chery", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "White", 
     country: "China", 
     image: carSuv 
@@ -34,37 +37,37 @@ const cars: Car[] = [
     model: "Coolray", 
     brand: "Geely", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "Black", 
     country: "China", 
-    image: carSuv 
+    image: coolray
   },
   { 
     id: 3, 
     model: "Song Plus", 
     brand: "BYD", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "Grey", 
     country: "China", 
-    image: carElectric 
+    image: songPlus 
   },
   { 
     id: 4, 
     model: "X70 Plus", 
     brand: "Jetour", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "White", 
     country: "China", 
-    image: carSuv 
+    image: jetourX70
   },
   { 
     id: 5, 
     model: "CS55 Plus", 
     brand: "Changan", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "Blue", 
     country: "China", 
     image: carSuv 
@@ -74,7 +77,7 @@ const cars: Car[] = [
     model: "MG ZS", 
     brand: "MG", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "Red", 
     country: "China", 
     image: carSuv 
@@ -84,7 +87,7 @@ const cars: Car[] = [
     model: "Golf 8 GTD", 
     brand: "Volkswagen", 
     year: 2024, 
-    price: 'contact us', 
+    price: '', 
     color: "Grey", 
     country: "Germany", 
     image: carSedan 
@@ -94,7 +97,7 @@ const cars: Car[] = [
     model: "T-Roc", 
     brand: "Volkswagen", 
     year: 2025, 
-    price: 'contact us', 
+    price: '', 
     color: "Black", 
     country: "Germany", 
     image: carSuv 
