@@ -1,31 +1,29 @@
-import heroCar from "@/assets/hero-car.png";
+import heroRami from "@/assets/hero-rami.png";
 
 const HeroSection = () => {
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center overflow-hidden" dir="rtl">
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src={heroCar}
+          src={heroRami}
           alt="hero car with gold accents"
           className="w-full h-full object-cover object-center"
           loading="eager"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
       </div>
 
       <div className="container relative mx-auto px-4 lg:px-8 pt-20">
         <div className="max-w-2xl">
-          <p className="text-primary font-body text-sm uppercase tracking-[0.3em] mb-4 animate-fade-in">
+          <p className="text-muted-foreground font-body text-sm uppercase tracking-[0.3em] mb-4 animate-fade-in">
             rami auto - شركة إستيراد وتصدير السيارات
           </p>
-          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
-       انطلق نحو التميز ^{" "}
-            <span className="text-gradient-gold">من قلب الصين مباشرة إلى الجزائر</span>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 animate-fade-in" style={{ animationDelay: "0.15s" }}>
+            انطلق نحو التميز <br /> 
+            <span className="text-gradient-gold">من الصين مباشرة إلى الجزائر</span>
           </h1>
           <p className="text-muted-foreground text-lg md:text-xl max-w-lg mb-10 animate-fade-in" style={{ animationDelay: "0.3s" }}>
-            نختصر لك المسافات لنأتي بأحدث وأقوى السيارات من قلب الصين مباشرة إلى الجزائر، بمواصفات استثنائية تلبي تطلعاتك.
+            نختصر لك المسافات لنأتي بأحدث وأقوى السيارات من الصين مباشرة إلى الجزائر، بمواصفات استثنائية تلبي تطلعاتك.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.45s" }}>
             <a

@@ -8,7 +8,7 @@ import carTruck from "@/assets/car-truck.png";
 import heroCar from "@/assets/hero-car.png";
 import coolray from "@/assets/coolray.png";
 import songPlus from "@/assets/BYD-Song-Plus.png";
-import jetourX70 from "@/assets/jetour-x70.png";
+import jetour from "@/assets/-x70-jetour-.png";
 
 interface Car {
   id: number;
@@ -27,7 +27,7 @@ const cars: Car[] = [
     model: "Tiggo 7 Pro Max", 
     brand: "Chery", 
     year: 2025, 
-    price: '', 
+    price: '35000', 
     color: "White", 
     country: "China", 
     image: carSuv 
@@ -37,7 +37,7 @@ const cars: Car[] = [
     model: "Coolray", 
     brand: "Geely", 
     year: 2025, 
-    price: '', 
+    price: '28000', 
     color: "Black", 
     country: "China", 
     image: coolray
@@ -47,7 +47,7 @@ const cars: Car[] = [
     model: "Song Plus", 
     brand: "BYD", 
     year: 2025, 
-    price: '', 
+    price: '32000', 
     color: "Grey", 
     country: "China", 
     image: songPlus 
@@ -57,17 +57,17 @@ const cars: Car[] = [
     model: "X70 Plus", 
     brand: "Jetour", 
     year: 2025, 
-    price: '', 
+    price: '30000', 
     color: "White", 
     country: "China", 
-    image: jetourX70
+    image: jetour
   },
   { 
     id: 5, 
     model: "CS55 Plus", 
     brand: "Changan", 
     year: 2025, 
-    price: '', 
+    price: '29000', 
     color: "Blue", 
     country: "China", 
     image: carSuv 
@@ -77,7 +77,7 @@ const cars: Car[] = [
     model: "MG ZS", 
     brand: "MG", 
     year: 2025, 
-    price: '', 
+    price: '27000', 
     color: "Red", 
     country: "China", 
     image: carSuv 
@@ -87,7 +87,7 @@ const cars: Car[] = [
     model: "Golf 8 GTD", 
     brand: "Volkswagen", 
     year: 2024, 
-    price: '', 
+    price: '45000', 
     color: "Grey", 
     country: "Germany", 
     image: carSedan 
@@ -97,7 +97,7 @@ const cars: Car[] = [
     model: "T-Roc", 
     brand: "Volkswagen", 
     year: 2025, 
-    price: '', 
+    price: '42000', 
     color: "Black", 
     country: "Germany", 
     image: carSuv 
