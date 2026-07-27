@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-
+import logo from '../assets/logo-cercle.png'
 const navLinks = [
   { label: "الرئيسية", href: "#home" },
   { label: "من نحن", href: "#about" },
@@ -30,7 +30,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 lg:px-8 flex items-center justify-between h-20">
         <a href="#home" className="font-display text-2xl font-bold tracking-wider">
-          <img src="src/assets/logo-cercle.png" alt="Rami Auto" className="h-14 w-auto" />
+          <img src={logo} alt="Rami Auto" className="h-14 w-auto" />
         </a>
 
         {/* Desktop */}
