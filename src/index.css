@@ -6,38 +6,38 @@
 
 @layer base {
 :root {
-  /* الخلفيات */
-  --background: 210 20% 98%;
-  --foreground: 215 30% 12%;
+    /* الخلفيات */
+    --background: 210 20% 98%;
+    --foreground: 215 30% 12%;
 
-  --card: 0 0% 100%;
-  --card-foreground: 215 30% 12%;
+    --card: 0 0% 100%;
+    --card-foreground: 215 30% 12%;
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 215 30% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 30% 12%;
 
-  /* الأزرق الرئيسي */
-  --primary: 215 70% 25%;
-  --primary-foreground: 0 0% 100%;
+    /* الأزرق الرئيسي */
+    --primary: 215 70% 25%;
+    --primary-foreground: 0 0% 100%;
 
-  /* الرمادي الفاتح */
-  --secondary: 210 15% 93%;
-  --secondary-foreground: 215 30% 12%;
+    /* الرمادي الفاتح */
+    --secondary: 210 15% 93%;
+    --secondary-foreground: 215 30% 12%;
 
-  /* الذهبي */
-  --accent: 43 90% 48%;
-  --accent-foreground: 215 30% 12%;
+    /* الذهبي */
+    --accent: 43 90% 48%;
+    --accent-foreground: 215 30% 12%;
 
-  --muted: 210 15% 85%;
-  --muted-foreground: 215 15% 45%;
+    --muted: 210 15% 85%;
+    --muted-foreground: 215 15% 45%;
 
-  --border: 210 15% 88%;
-  --input: 210 15% 88%;
-  --ring: 215 70% 25%;
+    --border: 210 15% 88%;
+    --input: 210 15% 88%;
+    --ring: 215 70% 25%;
 
-  --radius: 0.5rem;
-  --surface-elevated: 0 0% 100%;
-}
+    --radius: 0.5rem;
+    --surface-elevated: 0 0% 100%;
+  }
 }
 
 @layer base {

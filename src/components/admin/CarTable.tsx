@@ -22,9 +22,9 @@ interface Car {
   model: string;
   brand: string;
   year: number;
-  price: string;
+  price: number;
   country: string;
-  status: string;
+  status: "متاح" | "محجوز" | "مباع";
   image: string;
   color: string;
 }
